@@ -42,14 +42,25 @@ body {
     left: 70%;
 }
 
-#pickaxe {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    width: 100px;
-    transform: translateX(-50%);
-    cursor: pointer;
+#pickaxe.swing {
+    animation: swingAnim 0.3s ease;
 }
+
+@keyframes swingAnim {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    30% {
+        transform: translateX(-50%) rotate(-40deg);
+    }
+    60% {
+        transform: translateX(-50%) rotate(10deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+}
+
 
 .swing {
     animation: swing 0.3s ease;
